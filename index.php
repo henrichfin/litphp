@@ -11,7 +11,7 @@
 <div class="container">
     <header>Information</header>
 
-    <form action="" method="POST">
+    <form action="dislplay.php" method="POST">
         <div class="form first">
             <div class="details personal">
               <h1>Personal Data</h1>
@@ -55,6 +55,7 @@
     </select>
     <input type="text" id="othersInput" name="other_civil_status" placeholder="Specify Others" style="display: none;">
 </div>
+
             <div class="type">
                 <div class="input-type">
                     <label>Tax Identification Number</label>
@@ -121,7 +122,6 @@
                     <input type="text" name="subdivision" placeholder="Subdivision"  required >
                 </div>
             </div>
-            
 
             <div class="home">
                 <div class="input-home">
@@ -301,6 +301,7 @@
         if (!validateMiddleInitial($motherMiddleName)) {
             $errors[] = "Mother's Middle Initial must be a single letter.";
         }
+
 
         if (!empty($errors)) {
             echo "<div class='error-messages'>";
