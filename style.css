@@ -1,0 +1,118 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    background-color: #0f0f1a;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    overflow-y: auto;
+    max-height: 90vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+header {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #e94560;
+}
+
+.Select{
+    margin-left: 230px;
+    margin-top: 57px;
+}
+.Select input {
+    margin-top: 50px;  
+    display: none;  
+    margin-left: 180px;  
+}
+.Select civil_status{
+    margin-top:200px;
+}
+.btnText {
+    font-size: 20px;
+    transition: all 0.3s ease-in-out; 
+}
+.btnText:hover {
+    color: #ff0000; 
+    font-size: 22px; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+.form h1, .form h2, .form h3 {
+    margin-bottom: 20px;
+    position: relative;
+    color: #e94560;
+}
+.form h1::after, .form h2::after, .form h3::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #e94560;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+.fields, .type, .place, .home, .number {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.input-field, .input-type, .input-place, .input-home, .input-number {
+    width: 48%;
+    margin-bottom: 20px;
+}
+.input-field input, .input-type input, .input-place input, .input-home input, .input-number input, .status select, .country select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #e94560;
+    border-radius: 5px;
+    background-color: #1a1a2e;
+    color: #fff;
+}
+.status, .country {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.status select, .country select {
+    width: 100%;
+}
+.sex {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.buttons {
+    text-align: center;
+}
+.buttons .subBtn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e94560;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+.buttons .subBtn:hover {
+    background-color: #d83450;
+}
+.error-messages p {
+    color: red;
+}
+@media (max-width: 768px) {
+    .input-field, .input-type, .input-place, .input-home, .input-number {
+        width: 100%;
+    }
+}
