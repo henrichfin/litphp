@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Advance</title>
+    <title>Project</title>
     <link rel="stylesheet" href="style.css">
     </head>
 <body>
    
 <div class="container">
-    <header>Information</header>
+    <header></header>
 
-    <form action="dislplay.php" method="POST">
+    <form action="" method="POST">
         <div class="form first">
             <div class="details personal">
               <h1>Personal Data</h1>
@@ -19,33 +19,33 @@
             <div class="fields">
                 <div class="input-field">
                     <label>Last Name</label>
-                    <input type="text" name="last_name" placeholder="Enter Last Name" required>
+                    <input type="text" name="last_name" placeholder="Enter Last Name">
                 </div>
                 <div class="input-field">
                     <label>First Name</label>
-                    <input type="text" name="first_name" placeholder="Enter First Name" required>
+                    <input type="text" name="first_name" placeholder="Enter First Name">
                 </div>
                 <div class="input-field">
                     <label>Middle Initial</label>
-                    <input type="text" name="middle_initial" placeholder="Enter Middle Initial" required>
+                    <input type="text" name="middle_initial" placeholder="Enter Middle Initial" >
                 </div>
                 <div class="input-field">
                 <label for="date_of_birth">Date of Birth:</label>
-                <input type="date" id="date_of_birth" name="date_of_birth" required>
+                <input type="date" id="date_of_birth" name="date_of_birth" >
                 </div>
             </div>
 
             <div class="sex">
                 <label for="Male">Sex:</label>  
-                <input type="radio" id="Male" name="sex" value="Male" required>
+                <input type="radio" id="Male" name="sex" value="Male" >
                 <label for="Male">Male</label>
-                <input type="radio" id="Female" name="sex" value="Female" required>
+                <input type="radio" id="Female" name="sex" value="Female" >
                 <label for="Female">Female</label>
             </div>
 
             <div class="status">
     <label for="civilStatus">Civil Status:</label> 
-    <select id="civilStatus" name="civil_status" required onchange="toggleOtherField()">
+    <select id="civilStatus" name="civil_status"  onchange="toggleOtherField()">
         <option value="">Select Civil Status</option>
         <option value="Single">Single</option>
         <option value="Married">Married</option>
@@ -63,7 +63,7 @@
                 </div>
                 <div class="input-type">
                     <label>Nationality</label>
-                    <input type="text" name="nationality" placeholder="Enter Nationality" required>
+                    <input type="text" name="nationality" placeholder="Enter Nationality" >
                 </div>
                 <div class="input-type">
                     <label>Religion</label>
@@ -75,99 +75,98 @@
             <div class="place">
                 <div class="input-place">
                     <label>RM/FLR/Unit No. & Bldg.Name</label>
-                    <input type="text" name="unit" placeholder="Enter Unit" required>
+                    <input type="text" name="unit" placeholder="Enter Unit" >
                 </div>
                 <div class="input-place">
                     <label>House/Lot & Blk.No</label>
-                    <input type="text" name="blk_no" placeholder="Enter Blk.No" required>
+                    <input type="text" name="blk_no" placeholder="Enter Blk.No" >
                 </div>
                 <div class="input-place">
                     <label>Street Name</label>
-                    <input type="text" name="street_name" placeholder="Street Name" required>
+                    <input type="text" name="street_name" placeholder="Street Name" >
                 </div>
                 <div class="input-place">
                     <label>Subdivision</label>
                     <input type="text" name="subdivision" placeholder="Subdivision" >
                 </div>
             </div>
-            <div class="country">
-              <label>Country</label>
-              <select name="country" id="country" required>
-                <option value="" disabled selected>Select</option>
-                <?php
-                $countries = [ "Albania", "Algeria", "American Samoa", "Andorra", "Angola", "Anguilla", "Antarctica", "Antigua and Barbuda", "Argentina", "Armenia","Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas (the)", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia (Plurinational State of)", "Bonaire, Sint Eustatius and Saba", "Bosnia and Herzegovina", "Botswana", "Bouvet Island", "Brazil", "British Indian Ocean Territory (the)", "Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Cayman Islands (the)", "Central African Republic (the)", "Chad", "Chile", "China", "Christmas Island", "Cocos (Keeling) Islands (the)", "Colombia", "Comoros (the)", "Congo (the Democratic Republic of the)", "Congo (the)", "Cook Islands (the)", "Costa Rica", "Croatia", "Cuba", "Curaçao", "Cyprus", "Czechia", "Côte d'Ivoire", "Denmark", "Djibouti", "Dominica", "Dominican Republic (the)", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Falkland Islands (the) [Malvinas]", "Faroe Islands (the)", "Fiji", "Finland", "France", "French Guiana", "French Polynesia", "French Southern Territories (the)", "Gabon", "Gambia (the)", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Heard Island and McDonald Islands", "Holy See (the)", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran (Islamic Republic of)", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea (the Democratic People's Republic of)", "Korea (the Republic of)", "Kuwait", "Kyrgyzstan", "Lao People's Democratic Republic (the)", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macao", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands (the)", "Martinique", "Mauritania", "Mauritius", "Mayotte", "Mexico", "Micronesia (Federated States of)", "Moldova (the Republic of)", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands (the)", "New Caledonia", "New Zealand", "Nicaragua", "Niger (the)", "Nigeria", "Niue", "Norfolk Island", "Northern Mariana Islands (the)", "Norway", "Oman", "Pakistan", "Palau", "Palestine, State of", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines (the)", "Pitcairn", "Poland", "Portugal", "Puerto Rico", "Qatar", "Republic of North Macedonia", "Romania", "Russian Federation (the)", "Rwanda", "Réunion", "Saint Barthélemy", "Saint Helena, Ascension and Tristan da Cunha", "Saint Kitts and Nevis", "Saint Lucia", "Saint Martin (French part)", "Saint Pierre and Miquelon", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Sint Maarten (Dutch part)", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Georgia and the South Sandwich Islands", "South Sudan", "Spain", "Sri Lanka", "Sudan (the)", "Suriname", "Svalbard and Jan Mayen", "Sweden", "Switzerland", "Syrian Arab Republic", "Taiwan", "Tajikistan", "Tanzania, United Republic of", "Thailand", "Timor-Leste", "Togo", "Tokelau", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks and Caicos Islands (the)", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates (the)", "United Kingdom of Great Britain and Northern Ireland (the)", "United States Minor Outlying Islands (the)", "United States of America (the)", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela (Bolivarian Republic of)", "Viet Nam", "Virgin Islands (British)", "Virgin Islands (U.S.)", "Wallis and Futuna", "Western Sahara", "Yemen", "Zambia", "Zimbabwe", "Åland Islands" ];
-                foreach($countries as $country){
-                    echo"<option value=\"$country\">$country</option>";
-                }
-                ?>
-              </select>
+            <div class="home">
+                <div class="input-home">
+                    <label>Brgy/District/Locality</label>
+                    <input type="text" name="brgy" placeholder="Enter Brgy"  >
+                </div>
+                <div class="input-place">
+                    <label>City/Municipality</label>
+                    <input type="text" name="city" placeholder="Enter City"  >
+                </div>
+                <div class="input-place">
+                    <label>Province</label>
+                    <input type="text" name="province" placeholder="Province"  >
+                </div>
+                <div class="input-place">
+                    <label>Zip Code</label>
+                    <input type="text" name="zip_code" placeholder="Zip Code"  >
+                </div>
             </div>
-
+            
+           
             <h2>Home Address</h2>
             <div class="place">
                 <div class="input-place">
                     <label>RM/FLR/Unit No. & Bldg.Name</label>
-                    <input type="text" name="unit" placeholder="Enter Unit" required>
+                    <input type="text" name="unit" placeholder="Enter Unit" >
                 </div>
                 <div class="input-place">
                     <label>House/Lot & Blk.No</label>
-                    <input type="text" name="blk_no" placeholder="Enter Blk.No" required>
+                    <input type="text" name="blk_no" placeholder="Enter Blk.No" >
                 </div>
                 <div class="input-place">
                     <label>Street Name</label>
-                    <input type="text" name="street_name" placeholder="Street Name" required>
+                    <input type="text" name="street_name" placeholder="Street Name" >
                 </div>
                 <div class="input-place">
                     <label>Subdivision</label>
-                    <input type="text" name="subdivision" placeholder="Subdivision"  required >
+                    <input type="text" name="subdivision" placeholder="Subdivision"   >
                 </div>
             </div>
 
             <div class="home">
                 <div class="input-home">
                     <label>Brgy/District/Locality</label>
-                    <input type="text" name="brgy" placeholder="Enter Brgy"  required>
+                    <input type="text" name="brgy" placeholder="Enter Brgy"  >
                 </div>
                 <div class="input-place">
                     <label>City/Municipality</label>
-                    <input type="text" name="city" placeholder="Enter City"  required>
+                    <input type="text" name="city" placeholder="Enter City"  >
                 </div>
                 <div class="input-place">
                     <label>Province</label>
-                    <input type="text" name="province" placeholder="Province"  required>
+                    <input type="text" name="province" placeholder="Province"  >
                 </div>
                 <div class="input-place">
                     <label>Zip Code</label>
-                    <input type="text" name="zip_code" placeholder="Zip Code"  required>
+                    <input type="text" name="zip_code" placeholder="Zip Code"  >
                 </div>
             </div>
             
-            <div class="country">
-              <label>Country</label>
-              <select name="country" id="country" required>
-                <option value="" disabled selected>Select</option>
-                <?php
-                $countries = [ "Albania", "Algeria", "American Samoa", "Andorra", "Angola", "Anguilla", "Antarctica", "Antigua and Barbuda", "Argentina", "Armenia","Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas (the)", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia (Plurinational State of)", "Bonaire, Sint Eustatius and Saba", "Bosnia and Herzegovina", "Botswana", "Bouvet Island", "Brazil", "British Indian Ocean Territory (the)", "Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Cayman Islands (the)", "Central African Republic (the)", "Chad", "Chile", "China", "Christmas Island", "Cocos (Keeling) Islands (the)", "Colombia", "Comoros (the)", "Congo (the Democratic Republic of the)", "Congo (the)", "Cook Islands (the)", "Costa Rica", "Croatia", "Cuba", "Curaçao", "Cyprus", "Czechia", "Côte d'Ivoire", "Denmark", "Djibouti", "Dominica", "Dominican Republic (the)", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Falkland Islands (the) [Malvinas]", "Faroe Islands (the)", "Fiji", "Finland", "France", "French Guiana", "French Polynesia", "French Southern Territories (the)", "Gabon", "Gambia (the)", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Heard Island and McDonald Islands", "Holy See (the)", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran (Islamic Republic of)", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Korea (the Democratic People's Republic of)", "Korea (the Republic of)", "Kuwait", "Kyrgyzstan", "Lao People's Democratic Republic (the)", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macao", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands (the)", "Martinique", "Mauritania", "Mauritius", "Mayotte", "Mexico", "Micronesia (Federated States of)", "Moldova (the Republic of)", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands (the)", "New Caledonia", "New Zealand", "Nicaragua", "Niger (the)", "Nigeria", "Niue", "Norfolk Island", "Northern Mariana Islands (the)", "Norway", "Oman", "Pakistan", "Palau", "Palestine, State of", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines (the)", "Pitcairn", "Poland", "Portugal", "Puerto Rico", "Qatar", "Republic of North Macedonia", "Romania", "Russian Federation (the)", "Rwanda", "Réunion", "Saint Barthélemy", "Saint Helena, Ascension and Tristan da Cunha", "Saint Kitts and Nevis", "Saint Lucia", "Saint Martin (French part)", "Saint Pierre and Miquelon", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Sint Maarten (Dutch part)", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Georgia and the South Sandwich Islands", "South Sudan", "Spain", "Sri Lanka", "Sudan (the)", "Suriname", "Svalbard and Jan Mayen", "Sweden", "Switzerland", "Syrian Arab Republic", "Taiwan", "Tajikistan", "Tanzania, United Republic of", "Thailand", "Timor-Leste", "Togo", "Tokelau", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks and Caicos Islands (the)", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates (the)", "United Kingdom of Great Britain and Northern Ireland (the)", "United States Minor Outlying Islands (the)", "United States of America (the)", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela (Bolivarian Republic of)", "Viet Nam", "Virgin Islands (British)", "Virgin Islands (U.S.)", "Wallis and Futuna", "Western Sahara", "Yemen", "Zambia", "Zimbabwe", "Åland Islands" ];
-                foreach($countries as $country){
-                    echo"<option value=\"$country\">$country</option>";
-                }
-                ?>
-              </select>
-            </div>
+        
             
             <h2>Contact Information</h2>
             <div class="number">
                 <div class="input-number">
                     <label>Mobile/Cellphone Number</label>
-                    <input type="text" name="mobile_phone" placeholder="Enter Mobile Number" required pattern="[0-9]+" title="Must accept Numbers Only">
+                    <input type="text" name="mobile_phone" placeholder="Enter Mobile Number" 
+                     pattern="[0-9]+" title="Must accept Numbers Only">
                 </div>
                 <div class="input-number">
                     <label>E-mail Address</label>
-                    <input type="email" name="email" placeholder="Enter E-mail" required>
+                    <input type="email" name="email" placeholder="Enter E-mail" 
+                    >
                 </div>
                 <div class="input-number">
                     <label>Telephone Number</label>
-                    <input type="text" name="telephone_number" placeholder="Enter Telephone Number" required pattern="[0-9]+" title="Must accept Numbers Only">
+                    <input type="text" name="telephone_number" placeholder="Enter Telephone Number" 
+                     pattern="[0-9]+" title="Must accept Numbers Only">
                 </div>
             </div>
 
