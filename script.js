@@ -1,3 +1,48 @@
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("form");
+
+    form.addEventListener("submit", function (event) {
+        let isValid = true;
+
+    
+        const lastName = document.getElementById("last_name");
+        const lastNameError = document.getElementById("last_name_error");
+        if (!/^[A-Za-z\s]+$/.test(lastName.value)) {
+            lastNameError.textContent = "❌ Only letters and spaces allowed.";
+            isValid = false;
+        } else {
+            lastNameError.textContent = "";
+        }
+
+
+        const firstName = document.getElementById("first_name");
+        const firstNameError = document.getElementById("first_name_error");
+        if (!/^[A-Za-z\s]+$/.test(firstName.value)) {
+            firstNameError.textContent = "❌ Only letters and spaces allowed.";
+            isValid = false;
+        } else {
+            firstNameError.textContent = "";
+        }
+
+    
+        const middleInitial = document.getElementById("middle_initial");
+        const middleInitialError = document.getElementById("middle_initial_error");
+        if (!/^[A-Za-z]$/.test(middleInitial.value)) {
+            middleInitialError.textContent = "❌ Only one letter allowed.";
+            isValid = false;
+        } else {
+            middleInitialError.textContent = "";
+        }
+
+        // If validation fails, prevent form submission
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+});
+
+
+
 const form = document.querySelector("form"),
         nextBtn = document.querySelector(".nextBtn"),
         backBtn = document.querySelector(".backBtn"),
@@ -78,4 +123,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 selectElement.appendChild(option);
             });
     });
+    document.addEventListener("DOMContentLoaded", function () {
+        const fields = document.querySelectorAll("input, select");
     
+        fields.forEach(field => {
+            field.addEventListener("input", function () {
+                document.getElementById(`error-${field.name}`)?.innerText = "";
+            });
+        });
+    });
