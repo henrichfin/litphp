@@ -108,8 +108,12 @@ header {
 .buttons .subBtn:hover {
     background-color: #d83450;
 }
-.error-messages p {
+.error-message {
     color: red;
+    font-size: 0.9em;
+}
+.input-field, .input-type, .input-place, .input-number {
+    margin-bottom: 1em;
 }
 @media (max-width: 768px) {
     .input-field, .input-type, .input-place, .input-home, .input-number {
