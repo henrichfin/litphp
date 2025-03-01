@@ -256,7 +256,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($errors)) {
         $_SESSION['form_data'] = [
-            'fullName' => "$lastName, $firstName $middleInitial",
+           'last' => $lastName,
+            'first' => $firstName,
+            'middle' => $middleName,
             'dob' => $dateOfBirth,
             'age' => calculateAge($dateOfBirth),
             'sex' => $sex,
